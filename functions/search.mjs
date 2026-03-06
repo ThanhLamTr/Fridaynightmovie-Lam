@@ -11,21 +11,21 @@ export default async function search(){
             JSON.stringify(data),{
                 status:200,
                 header:{
-                    'content-tyoe':'movie/json'
+                       'Content-Type':'application/json'
                 }
             }
         
         )
     }
     catch (error){
-        return new response(
+        return new Response(
             JSON.stringify({
                 error:"Could not complete movie"
             }),
             {
                 status:500,
                 header:{
-                    'content-type':'movie/json'
+                    'Content-Type':'application/json'
                 }
             }
         )
