@@ -7,7 +7,7 @@ export default async function search(){
         }
         const response =await fetch(endpointURL,options);
         const data= await response.json();
-        return new Response()(
+        return new Response(
             JSON.stringify(data),{
                 status:200,
                 header:{
